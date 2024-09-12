@@ -1,0 +1,43 @@
+<div class="fixed w-full h-full max-w-full max-h-full bg-dark">
+
+    <!-- Header -->
+    <div class="flex px-4 py-1 gap-2 items-center border-b border-b-granite-gray">
+
+        <!-- Logo -->
+        <button
+            class="min-w-16 w-16 max-w-16"
+            [routerLink]="['/']">
+            <img src="images/icon.png"/>
+        </button>
+
+        <!-- Navigation -->
+        <div class="flex gap-2">
+            @for (item of navigation; track item.id) {
+                <button mat-button
+                    [routerLink]="['/', item.route]"
+                    [routerLinkActive]="['text-white', 'bg-red-500']">
+                    {{ item.title }}
+                </button>
+            }
+        </div>
+
+        <!-- Actions -->
+        <div class="ml-auto">
+
+            <!-- User -->
+            <button mat-icon-button
+                [matMenuTriggerFor]="menu"
+                class="flex items-center">
+                <mat-icon>account_circle</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <mat-icon>settings</mat-icon>
+                    <span>Settings</span>
+                </button>
+            </mat-menu>
+        </div>
+    </div>
+
+    <router-outlet/>
+</div>
