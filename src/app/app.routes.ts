@@ -14,7 +14,11 @@ export const routes: Routes = [
             {
                 path: 'home',
                 loadComponent: () => import('./modules/home/home.component').then(c => c.HomeComponent)
-            }
+            },
+            {
+                path: 'about',
+                loadComponent: () => import('./modules/about/about.component').then(c => c.AboutComponent)
+            },
         ]
     }
 ];
