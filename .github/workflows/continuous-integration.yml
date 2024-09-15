@@ -22,5 +22,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Test Angular App
+        run: npm run test
+  
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Build Angular App
         run: npm run build
