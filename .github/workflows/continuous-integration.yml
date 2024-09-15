@@ -26,4 +26,4 @@ jobs:
         run: npm run test
 
       - name: Build Angular App
-        run: npm run build --output-path=dist --base-href /pucpr-devops/
+        run: npm run build --output-path=dist --base-href pucpr-devops
