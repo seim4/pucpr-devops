@@ -197,7 +197,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     // Private methods
-    private _initForm(): void {
+    public _initForm(): void {
 
         this.courses.map(c => {
             const group = new FormGroup<FormCourseType>({
