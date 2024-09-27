@@ -27,14 +27,6 @@ jobs:
 
       - name: Build Angular App
         run: npm run build --output-path=dist --base-href pucpr-devops
-  
-  discord-webhook:
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
 
       - name: Run Discord Webhook
         uses: johnnyhuy/actions-discord-git-webhook@main 
